@@ -31,10 +31,10 @@ The token is needed to avoid rate limitation issues when performing API calls. I
 
 Please read [this section in the docs](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-third-party-actions) before using some random action that asks for your secrets.
 
-If you decide to trust me and you want to use the latest version automatically, use the `next` tag.
+To use the latest version automatically, use the `main` branch.
 
 ```yaml
-- uses: mktcode/consecutive-workflow-action@next
+- uses: mktcode/consecutive-workflow-action@main
 ```
 
 I recommend using a commit hash instead though, like in the usage example.
