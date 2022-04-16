@@ -11,7 +11,7 @@ jobs:
   consecutiveness:
     runs-on: ubuntu-latest
     steps:
-    - uses: mktcode/consecutive-workflow-action@v1 # please read security note
+    - uses: mktcode/consecutive-workflow-action@e2e008186aa210faacd68ec30f6ac236f7e2f435
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -31,13 +31,13 @@ The token is needed to avoid rate limitation issues when performing API calls. I
 
 Please read [this section in the docs](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-third-party-actions) before using some random action that asks for your secrets.
 
-There is a `v1` branch and tag for this action and you can simply decide to trust me. I recommend using a commit hash instead though.
+If you decide to trust me and you want to use the latest version automatically, use the `next` tag.
 
 ```yaml
-- uses: mktcode/consecutive-workflow-action@0b779df0b7f31f656194b3aa004cc29dd406393b
+- uses: mktcode/consecutive-workflow-action@next
 ```
 
-Review [the repo at this commit](https://github.com/mktcode/consecutive-workflow-action/tree/cb3605cc3ab767c170434b0cfb6b522d193b7d57).
+I recommend using a commit hash instead though, like in the usage example.
 
 #### Workflow Permissions
 
